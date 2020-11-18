@@ -19,17 +19,25 @@ You can select either of one by commenting out other command.
 
 In "train/{batch_size}/pretrained" folder, the pretrained checkpoints are stored, which can be used in the inference. 
 Note: due to the storage limitation, only AresB-18 pretrained file is included.
+-- Due to the limitation of Github storage, 
+the following link is used to download the pretrained models:
+CIFAR10 : https://dkuniv-my.sharepoint.com/:u:/g/personal/12112129_dankook_ac_kr/EcA3VDgTr-9KviO5qXOrjx4BWLvBOBxotNPcGRnA4QAsZA?e=BeSp3B 
+
+CIFAR100: https://dkuniv-my.sharepoint.com/:u:/g/personal/12112129_dankook_ac_kr/EZm9l6Rbr6pGuDGZCq7ht6UB5Za-KT1aug2oeTWLF_6zSQ?e=7PZg1v
+
+ImageNet: https://dkuniv-my.sharepoint.com/:u:/g/personal/12112129_dankook_ac_kr/EXrrmtGotqpAs3PlthSNNgYBkgT-YmazPam2d1e9sMp6HQ?e=t0c0Sf
+
 In "output/{batch_size}/pretrained" folder, the training and inference outputs for each epoch are listed.
 If you run any command, the outputs are shown in "output/{batch_size}" folder.
 The model file is contained in "models" folder. 
 
 The outputs are as follows:
 
-cifar10 - AresB-10: 90.74@Top-1
+CIFAR10 - AresB-10: 90.74@Top-1
           AresB-18: 91.80@Top-1
           AresB-34: 92.71@Top-1 
 
-cifar100 - AresB-10: 69.45@Top-1 91.70@Top-5
+CIFAR100 - AresB-10: 69.45@Top-1 91.70@Top-5
            AresB-18: 73.01@Top-1 92.57@Top-5
            AresB-34: 74.73@Top-1 93.25@Top-5
 
