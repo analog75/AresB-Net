@@ -1,0 +1,43 @@
+AresB-Net: Accurate Residual Binarized Neural Networks using Shortcut Concatenation and Shuffled Grouped Convolution
+
+In summary, AresB-Net is very simple and easy for stacking pyramid structure.
+Besides, even though there is no 1x1 convolution in stride for low-hardware overhead,
+we have achieved remarkable evaluation results on CIFAR and ImageNet datasets without any specific initial weights and training techniques; 
+we only focus on the model structure for apple-to-apple comparisons.  
+Therefore, we can assure that there is additional margin to enhance the classification results.
+
+
+This foloder contains supplementary materials of the evaluations for proving AresB-Net on CIFAR-10, CIFAR-10, and Imagenet dataset.
+The following folders contains as:
+
+- cifar10: evaluation of AresB-Net (no dropout before final FC layer)
+- cifar100: evaluation of AresB-Net (dropout before final FC layer)
+- imageNet: evaluation of AresB-Net (no dropout before final FC layer)
+
+In each folder, "aresb.sh" file contains the command for training and inference including batch size and weight decay. 
+You can select either of one by commenting out other command.
+
+In "train/{batch_size}/pretrained" folder, the pretrained checkpoints are stored, which can be used in the inference. 
+Note: due to the storage limitation, only AresB-18 pretrained file is included.
+In "output/{batch_size}/pretrained" folder, the training and inference outputs for each epoch are listed.
+If you run any command, the outputs are shown in "output/{batch_size}" folder.
+The model file is contained in "models" folder. 
+
+The outputs are as follows:
+
+cifar10 - AresB-10: 90.74@Top-1
+          AresB-18: 91.80@Top-1
+          AresB-34: 92.71@Top-1 
+
+cifar100 - AresB-10: 69.45@Top-1 91.70@Top-5
+           AresB-18: 73.01@Top-1 92.57@Top-5
+           AresB-34: 74.73@Top-1 93.25@Top-5
+
+ImageNet - AresB-10: 48.51@Top-1 71.72@Top-5
+           AresB-18: 54.81@Top-1 78.15@Top-5
+           AresB-34: 58.46@Top-1 81.22@Top-5
+
+Due to the limitation of file size, we do not include CIFAR and ImageNet datasets.
+If you run the experiments on CIFAR dataset, the datasets can be automatically downloaded.
+On the other hand, on ImageNet dataset, lmdb-formatted library is required.
+
